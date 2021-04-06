@@ -14,9 +14,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().tintColor = .lightGray
+        UINavigationBar.appearance().barTintColor = .black
+        if let windowScene = scene as? UIWindowScene {
+            let vc = MyViewController()
+            let navCont = ProgressNavigationController(root: vc)
+            window = UIWindow()
+            window?.windowScene = windowScene
+            window?.makeKeyAndVisible()
+            window?.rootViewController = navCont
+        }
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
