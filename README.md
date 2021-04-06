@@ -21,4 +21,4 @@ Simple subclass of UINavigationController that displays navigation progress unde
 
 ## Demo
 
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/22365403/113731651-9f66ad80-9701-11eb-8314-cafb7765c37d.gif)
+<img src="https://user-images.githubusercontent.com/22365403/113731651-9f66ad80-9701-11eb-8314-cafb7765c37d.gif" alt="demo" width="376" height="808">
